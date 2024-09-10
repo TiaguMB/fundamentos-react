@@ -12,7 +12,6 @@ export default function App() {
 	]);
 
 	function handleRefresh() {
-		// Usar o prevState quando precisar usar o valor antigo do state
 		setPosts((prevState) => [
 			...prevState,
 			{
@@ -22,6 +21,12 @@ export default function App() {
 				likes: 50
 			},
 		]);
+	}
+
+	function handleRemovePost(postId) {
+		setPosts((prevState) => (
+			prevState.filter(post => post.id !== postId)
+		));
 	}
 
 	return (
@@ -39,7 +44,9 @@ export default function App() {
 				<Post
 					key={post.id}
 					likes={post.likes}
+					onRemove={handleRemovePost}
 					post={{
+						id: post.id,
 						title: post.title,
 						subtitle: post.subtitle
 					}}

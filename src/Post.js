@@ -15,7 +15,7 @@ function Post(props) {
 	);
 }
 
-Post.PropTypes = {
+Post.propTypes = {
 	likes: PropTypes.number.isRequired,
 	post: PropTypes.shape({
 		title: PropTypes.string.isRequired,

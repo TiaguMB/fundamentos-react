@@ -10,7 +10,7 @@ export default function Header({ title, children }) {
 	);
 }
 
-Header.PropTypes = {
+Header.propTypes = {
 	title: PropTypes.string,
 	children: PropTypes.node,
 };

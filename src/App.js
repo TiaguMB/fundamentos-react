@@ -18,7 +18,8 @@ export default function App() {
 				id: Math.random(),
 				title: `Title#0${prevState.length + 1}`,
 				subtitle: `Sub#0${prevState.length + 1}`,
-				likes: 50
+				likes: 50,
+				read: false,
 			},
 		]);
 	}

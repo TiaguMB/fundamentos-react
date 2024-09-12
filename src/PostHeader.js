@@ -12,7 +12,6 @@ function PostHeader(props) {
 			</strong>
 			<Button
 				onClick={() => props.onRemove(props.post.id)}
-				theme={props.theme}
 			>
 					Remover
 				</Button>
@@ -27,7 +26,6 @@ PostHeader.propTypes = {
 		title: PropTypes.string.isRequired,
 		read: PropTypes.bool.isRequired,
 	}).isRequired,
-	theme: PropTypes.string.isRequired,
 };
 
 export default PostHeader;

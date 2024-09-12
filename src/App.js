@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Post from './Post';
 import Header from './Header';
 import { ThemeProvider } from './ThemeContext';
+import * as styles from './App.css';
 
 export default function App() {
 	const [posts, setPosts] = useState([
@@ -34,7 +35,7 @@ export default function App() {
 	return (
 		<ThemeProvider>
 			<Header>
-				<h2>
+				<h2 className={styles.title}>
 					Posts da semana
 					<button onClick={handleRefresh}>Atualizar</button>
 				</h2>

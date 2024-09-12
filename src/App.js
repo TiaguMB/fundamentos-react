@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Post from './Post';
 import Header from './Header';
 import { ThemeProvider } from './ThemeContext';
-import * as styles from './App.css';
+import * as styles from './App.scss';
 
 export default function App() {
 	const [posts, setPosts] = useState([

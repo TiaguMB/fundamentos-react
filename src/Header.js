@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 
-import Button from "./Button";
-import { ThemeContext } from "./ThemeContext";
+import Button from './Button';
+import { ThemeContext } from './ThemeContext';
 
 export default function Header({
 	title,
@@ -29,5 +29,5 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-	title: "JStack's blog"
+	title: `JStack's blog`
 }

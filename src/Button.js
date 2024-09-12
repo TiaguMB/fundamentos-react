@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from './ThemeContext';
 
 function Button(props) {
 	const { theme } = useContext(ThemeContext);
@@ -10,8 +10,8 @@ function Button(props) {
 		<button
 			onClick={props.onClick}
 			style={{
-				color: theme === "dark" ? "#fff" : "#000",
-				background: theme === "dark" ? "#000" : "#fff",
+				color: theme === 'dark' ? '#fff' : '#000',
+				background: theme === 'dark' ? '#000' : '#fff',
 			}}
 		>
 			{props.children}

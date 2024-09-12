@@ -10,7 +10,12 @@ function PostHeader(props) {
 				{props.post.read && <s>{props.post.title}</s>}
 				{!props.post.read && props.post.title}
 			</strong>
-			<Button onClick={() => props.onRemove(props.post.id)}>Remover</Button>
+			<Button
+				onClick={() => props.onRemove(props.post.id)}
+				theme={props.theme}
+			>
+					Remover
+				</Button>
 		</>
 	);
 }
@@ -22,6 +27,7 @@ PostHeader.propTypes = {
 		title: PropTypes.string.isRequired,
 		read: PropTypes.bool.isRequired,
 	}).isRequired,
+	theme: PropTypes.string.isRequired,
 };
 
 export default PostHeader;

@@ -15,6 +15,7 @@ function Post(props) {
 						read: props.post.read,
 					}}
 					onRemove={props.onRemove}
+					theme={props.theme}
 				/>
 				<br />
 				<small>{props.post.subtitle}</small>
@@ -35,6 +36,7 @@ Post.propTypes = {
 		likes: PropTypes.number.isRequired,
 		read: PropTypes.bool.isRequired,
 	}).isRequired,
+	theme: PropTypes.string.isRequired,
 };
 
 export default Post;

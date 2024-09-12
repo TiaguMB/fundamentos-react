@@ -11,7 +11,13 @@ export default function Header({
 	const { onToggleTheme } = useContext(ThemeContext);
 
 	return (
-		<>
+		<div
+			style={{
+				background: '#ccc',
+				fontFamily: 'sans-serif',
+				marginBottom: 24, //? == '24px'
+			}}
+		>
 			<h1>{title}</h1>
 			<Button
 				onClick={onToggleTheme}
@@ -19,7 +25,7 @@ export default function Header({
 				Mudar tema
 			</Button>
 			{children}
-		</>
+		</div>
 	);
 }
 

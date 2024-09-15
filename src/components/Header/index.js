@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import Button from '../Button';
 import { ThemeContext } from '../../context/ThemeContext';
-import * as styles from './Header.scss';
+
+const Title = styled.h1`
+	color: #527BF3;
+`;
 
 export default function Header({
 	title,
@@ -13,7 +17,7 @@ export default function Header({
 
 	return (
 		<>
-			<h1 className={styles.title}>{title}</h1>
+			<Title>{title}</Title>
 			<Button
 				onClick={onToggleTheme}
 			>

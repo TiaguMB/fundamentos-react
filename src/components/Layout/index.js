@@ -1,13 +1,10 @@
 import React from 'react';
-import { useTheme } from 'styled-components';
 
 import Header from '../Header';
 import PostsList from '../PostsList';
 import Footer from '../Footer';
 
 export default function Layout({ onToggleTheme, selectedTheme }) {
-	const theme = useTheme();
-
 	return (
 		<>
 			<Header
@@ -19,16 +16,6 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
 				onToggleTheme={onToggleTheme}
 				selectedTheme={selectedTheme}
 			/>
-
-			<div
-				style={{
-					marginTop: 24,
-					padding: 24,
-					backgroundColor: theme.footerBackgroundColor,
-				}}
-			>
-				Oi tudo bem com você?
-			</div>
 		</>
 	);
 }

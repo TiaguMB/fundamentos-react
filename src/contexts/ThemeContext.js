@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState } from "react";
+import React, { createContext, useEffect, useMemo, useState } from "react";
 import { ThemeProvider } from 'styled-components';
 
 import themes from '../styles/themes';
@@ -13,16 +13,16 @@ export function CustomThemeProvider({ children }) {
 	}, [theme]);
 
 	function handleToggleTheme() {
-		setTheme(prevState => {
-			const newTheme = prevState === 'dark' ? 'light' : 'dark';
-			localStorage.setItem('theme', newTheme);
-			return newTheme;
-		});
+		setTheme(prevState => prevState === 'dark' ? 'light' : 'dark');
 	}
+
+	useEffect(() => {
+		localStorage.setItem('theme', theme);
+	}, [theme]);
 
 	return (
 		<ThemeContext.Provider value={{
-			selectedTheme: currentTheme,
+			selectedTheme: theme,
 			onToggleTheme: handleToggleTheme,
 		}}>
 			<ThemeProvider theme={currentTheme}>

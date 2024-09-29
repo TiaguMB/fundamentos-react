@@ -8,7 +8,7 @@ function App() {
 	return (
 		<CustomThemeProvider>
 			<GlobalStyle />
-			<Layout/>
+			<Layout />
 		</CustomThemeProvider>
 	);
 };
